@@ -9,11 +9,17 @@ https://ethernaut.openzeppelin.com/
 This challenge is created to make you familiar with the interface. Here you will learn about the commands that will be helpful while playing the CTF. At this level you will also be setting up the Metamask. Once you are done with all these steps you have to find the passkey that you have to enter to pass this challenge. Also you have to find out the method using which you have to submit the password and if you have followed the ninth step then you must be having it.And still if you do not have the method name then below commands will lead you to the method name.
 
 a) await contract.info()
+
 b) await contract.info1()
+
 c) await contract.info2("hello")
+
 d) await contract.infoNum()
+
 e) await contract.info42()
+
 f) await contract.theMethodName()
+
 g) await contract.method7123949()
 
 Now to get the passkey below is the solution
