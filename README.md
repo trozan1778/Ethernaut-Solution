@@ -23,6 +23,7 @@ f) await contract.theMethodName()
 g) await contract.method7123949()
 
 Now to get the passkey below is the solution
+
 First enter the contract.abi command that helps you interact with the deployed code and come to know about it's functions. When going through the result of the above command you must have find the 'password' method that will return the passkey to solve the challenge. So enter the await contract.password() command and you will find the passkey.
 
 Now you have both method name and the passkey. So now go and submit it and the challenge will be completed.
