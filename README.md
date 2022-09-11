@@ -23,3 +23,31 @@ First enter the ```contract.abi``` command that helps you interact with the depl
 
 Now you have both method name and the passkey. Go and submit the passkey and the challenge will get completed.
 
+## 2) **Fallback**
+
+From the name of the challenge, you can easily interpret that it's related to fallback function.The challenge requires us to claim the ownership of the contract and reduce it's balance to 0.
+
+In this contract we can claim the ownership of the contract using two functions:<br/>
+a) contribute<br/>
+b) receive()<br/>
+
+In order to claim ownership using contribute function, you will require large amount of ethers.So that's not practically possible and also it's require statement will revert the transaction, even if you send the required ethers.The only way left is using receive() function.This function will get executed on calls to the contract with no data (calldata), e.g. calls made via send() or transfer().
+But it also have prerequisite that msg.sender must be having some of there balance in the contract.
+
+For this we will first call contribute function with 0.00001 ether(because amount should be less than 0.001 ether) using javascript console(Press Ctrl+Shift+I in windows)
+
+```contract.contribute({value:"10000000000000"})```
+
+Then we will use send method to trnasfer some ethers to the contract
+
+```contract.send("10000000000000")```
+
+Now you must be the owner of the contract if you have followed the above solution properly.You can check it using the following command
+
+```await contract.owner()```
+
+Now to withdraw the entire balance use withdraw function.
+
+```await contract.withdraw()```
+
+Hurray!!! The Challenge have been completed.
